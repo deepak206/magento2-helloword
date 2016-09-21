@@ -1,0 +1,20 @@
+<a href="#" data-text="<?php echo $block->getMessage()?>" data-link="<?php echo $block->getCurrentUrl()?>" id='magegeeks_whatsappsharebutton' class="w3_whatsapp_btn <?php echo $block->getButtonType()?>"><?php echo $block->getLable()?></a>
+<script>
+require(['jquery', 'jquery/ui'], function($){
+     $(document).ready(function() {
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+			$(document).on("click", '.w3_whatsapp_btn', function() {
+	            var text = $(this).attr("data-text");
+	            var url = $(this).attr("data-link");
+	            var message = encodeURIComponent(text) + " - " + encodeURIComponent(url);
+	            var whatsapp_url = "whatsapp://send?text=" + message;
+	            window.location.href = whatsapp_url;
+	        });
+        } else {
+           // $('#magegeeks_whatsappsharebutton').css({'display':'none'});
+        }
+    });
+});
+
+
+</script>

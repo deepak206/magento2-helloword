@@ -1,5 +1,5 @@
 {
-    "name": "Magegeeks/module-Whatsappsharebutton",
+    "name": "package/magento2-Hidepriceandcartbutton",
     "description": "This extension is use to hide price and add to cart for non login user.",
     "require": {
         "php": "~5.5.0|~5.6.0"
@@ -14,7 +14,7 @@
         "map": [
             [
                 "*",
-                "Magegeeks/Whatsappsharebutton"
+                "Magegeeks/Hidepriceandcartbutton"
             ]
         ]
     }
